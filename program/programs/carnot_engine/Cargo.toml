@@ -1,0 +1,28 @@
+[package]
+name = "carnot_engine"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "carnot_engine"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+idl-build = [
+    "anchor-lang/idl-build",
+    "anchor-spl/idl-build",
+]
+default = []
+staging = []
+not-staging = []
+
+[dependencies]
+anchor-lang = { version = "0.32.0", features = ["init-if-needed"] }
+anchor-spl = { version = "0.32.0", features = ["token"] }
+pyth-solana-receiver-sdk = "1.1.0"
+solana-bn254 = "3.2.1"
+solana-sha256-hasher = "2.3"

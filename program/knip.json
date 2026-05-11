@@ -1,0 +1,13 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "entry": [
+    "scripts/lp-deposit.ts",
+    "ts-sdk/index.ts"
+  ],
+  "project": [
+    "cli/**/*.ts",
+    "scripts/**/*.ts",
+    "ts-sdk/**/*.ts",
+    "tests/**/*.ts"
+  ]
+}

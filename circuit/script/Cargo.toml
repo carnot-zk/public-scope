@@ -1,0 +1,40 @@
+[package]
+version = "0.1.0"
+name = "carnot-script"
+edition = "2021"
+default-run = "carnot"
+
+[[bin]]
+name = "carnot"
+path = "src/bin/main.rs"
+
+[[bin]]
+name = "vkey"
+path = "src/bin/vkey.rs"
+
+[[bin]]
+name = "keeper-prover"
+path = "src/bin/keeper_prover.rs"
+
+[dependencies]
+# SP1 v6.1.0 (network prover rejects older tags).
+sp1-sdk = { git = "https://github.com/succinctlabs/sp1.git", tag = "v6.1.0", package = "sp1-sdk", features = ["network"] }
+# Keep alloy 1.0.x line aligned (macro/trait mismatch if signer drifts to 1.8.x).
+alloy-signer = "=1.0.30"
+alloy-tx-macros = "=1.0.30"
+sp1-verifier = { git = "https://github.com/succinctlabs/sp1.git", tag = "v6.1.0", package = "sp1-verifier", features = ["ark"] }
+ark-bn254 = "0.5.0"
+ark-serialize = "0.5.0"
+serde_json = { version = "1.0", default-features = false, features = ["alloc"] }
+serde = { workspace = true, features = ["derive"] }
+clap = { version = "4.0", features = ["derive", "env"] }
+tracing = "0.1.40"
+hex = "0.4.3"
+sha2 = { workspace = true }
+carnot-lib = { path = "../lib", features = ["serde", "std"] }
+dotenv = "0.15.0"
+tokio = { version = "1", features = ["full"] }
+anyhow = "1.0"
+
+[build-dependencies]
+sp1-build = { git = "https://github.com/succinctlabs/sp1.git", tag = "v6.1.0", package = "sp1-build" }

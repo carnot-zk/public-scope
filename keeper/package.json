@@ -1,0 +1,35 @@
+{
+  "name": "carnot-keeper",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Permissionless keeper bot for the Carnot platform — fetches batch data, generates ZK proofs, and submits settlements on-chain.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "rewards": "ts-node src/reward-tracker.ts",
+    "lint": "eslint src --ext .ts",
+    "typecheck": "tsc --noEmit",
+    "knip": "knip",
+    "deps:circular": "npx --yes madge --circular --extensions ts src"
+  },
+  "dependencies": {
+    "@carnot/sdk": "0.1.7",
+    "@coral-xyz/anchor": "^0.32.0",
+    "@solana/web3.js": "^1.91.0",
+    "axios": "^1.6.0",
+    "better-sqlite3": "^9.0.0",
+    "bs58": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.0",
+    "@types/node": "^20.0.0",
+    "knip": "^5.88.1",
+    "madge": "^8.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.3.0"
+  }
+}

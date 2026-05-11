@@ -1,0 +1,28 @@
+services:
+  keeper:
+    build:
+      context: ..
+      dockerfile: keeper/Dockerfile
+    restart: unless-stopped
+    environment:
+      SOLANA_RPC_URL: ${SOLANA_RPC_URL}
+      SOLANA_WS_URL: ${SOLANA_WS_URL}
+      SOLANA_COMMITMENT: confirmed
+      NETWORK: ${NETWORK:-devnet}
+      KEEPER_KEYPAIR: ${KEEPER_KEYPAIR}
+      CARNOT_API_URL: ${CARNOT_API_URL}
+      CARNOT_INTERNAL_API_KEY: ${CARNOT_INTERNAL_API_KEY}
+      USDT_MINT: ${USDT_MINT}
+      SP1_PROVER: ${SP1_PROVER}
+      SP1_PRIVATE_KEY: ${SP1_PRIVATE_KEY}
+      MIN_PROOF_WAIT_MS: "90000"
+      BATCH_WINDOW_SECS: ${BATCH_WINDOW_SECS:-900}
+      BATCH_POLL_INTERVAL_MS: ${BATCH_POLL_INTERVAL_MS:-30000}
+      REWARD_DB_PATH: /data/rewards.db
+    volumes:
+      - keeper-data:/data
+    mem_limit: 8g
+    cpus: "8"
+
+volumes:
+  keeper-data:

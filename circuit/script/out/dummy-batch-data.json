@@ -1,0 +1,59 @@
+{
+  "batchId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "windowStart": 1000,
+  "windowEnd": 1008,
+  "trades": [
+    {
+      "tradeId": "0100000000000000000000000000000000000000000000000000000000000000",
+      "traderPubkey": "0000000000000000000000000000000000000000000000000000000000000001",
+      "direction": "Up",
+      "entryPrice": "1000",
+      "exitPrice": "1020",
+      "stakeUsdt": "40000",
+      "multiplierBps": 15000,
+      "windowStart": 1000,
+      "windowEnd": 1008,
+      "bandLower": "950",
+      "bandUpper": "1000",
+      "maxPayoutUsdt": "60000"
+    },
+    {
+      "tradeId": "0200000000000000000000000000000000000000000000000000000000000000",
+      "traderPubkey": "0000000000000000000000000000000000000000000000000000000000000002",
+      "direction": "Down",
+      "entryPrice": "1000",
+      "exitPrice": "980",
+      "stakeUsdt": "40000",
+      "multiplierBps": 15000,
+      "windowStart": 1000,
+      "windowEnd": 1008,
+      "bandLower": "900",
+      "bandUpper": "1300",
+      "maxPayoutUsdt": "60000"
+    }
+  ],
+  "ohlc": [
+    { "ts": 1000, "open": "1000", "high": "1060", "low": "940", "close": "1020" },
+    { "ts": 1001, "open": "1002", "high": "1055", "low": "948", "close": "1013" },
+    { "ts": 1002, "open": "1004", "high": "1060", "low": "946", "close": "1016" },
+    { "ts": 1003, "open": "1006", "high": "1065", "low": "944", "close": "1019" },
+    { "ts": 1004, "open": "1008", "high": "1070", "low": "942", "close": "1022" },
+    { "ts": 1005, "open": "1010", "high": "1075", "low": "940", "close": "1025" },
+    { "ts": 1006, "open": "1012", "high": "1080", "low": "938", "close": "1028" },
+    { "ts": 1007, "open": "1014", "high": "1085", "low": "936", "close": "1031" },
+    { "ts": 1008, "open": "1020", "high": "1090", "low": "890", "close": "900" }
+  ],
+  "poolBalanceBefore": "10000000",
+  "currentLiabilityBefore": "120000",
+  "keeperFeeBps": 100,
+  "protocolFeeBps": 200,
+  "marketMaxMultiplier": 20000,
+  "marketRegimeId": 7,
+  "pythFeedId": "e62df6c8b4a85fe1a67db44dc12de5db330f7ac66b72dc658afedf0f4a415b43",
+  "pythCheckpoints": [
+    { "price": "102000", "conf": "50", "exponent": -8, "publishTime": 1000 },
+    { "price": "102200", "conf": "50", "exponent": -8, "publishTime": 1004 },
+    { "price": "90000", "conf": "50", "exponent": -8, "publishTime": 1008 }
+  ],
+  "pythCheckpointAccounts": []
+}

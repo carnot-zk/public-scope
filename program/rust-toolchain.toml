@@ -1,0 +1,4 @@
+[toolchain]
+# New enough Cargo to parse recent crates.io manifests when running `anchor build` / `cargo-build-sbf`.
+# Project-local only (does not change your global rustup default).
+channel = "stable"

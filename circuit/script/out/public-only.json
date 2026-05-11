@@ -1,0 +1,23 @@
+{
+  "proof_system": "execute",
+  "suitable_for_onchain": false,
+  "batch_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "window_start": 1000,
+  "window_end": 1008,
+  "pyth_price_hash": "3f53a6343046b2d9080c1c331d2326aef805ffcee18559821031239f6433ec86",
+  "net_payout_usdt": -1500000,
+  "pool_balance_before": 10000000,
+  "pool_balance_after": 11485000,
+  "num_trades": 2,
+  "nullifier_hash": "e9c6fd5d9ee7c58812cf52d6290c5d3ef06fed1f81303dc5ea2c4ed2f28ebc48",
+  "keeper_fee": 15000,
+  "current_liability_before": 3900000,
+  "protocol_fee": 30000,
+  "num_winners": 1,
+  "num_losers": 1,
+  "total_winners_payout": 1500000,
+  "total_losers_stake": 2000000,
+  "market_regime_id": 7,
+  "payouts_commitment": "d64d6b2ea7e2b16addcf261f77d96ba11506edc966b135dac0391c9af699e596",
+  "trades_commitment": "a91e5129cb37a166fef2ea58b046544823e280ff5f02878c652e7b20ad486814"
+}

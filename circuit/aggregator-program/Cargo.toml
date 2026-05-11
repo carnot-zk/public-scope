@@ -1,0 +1,16 @@
+[package]
+version = "0.1.0"
+name = "carnot-aggregator-circuit"
+edition = "2021"
+
+[[bin]]
+name = "carnot-aggregator-circuit"
+path = "src/main.rs"
+test = false
+bench = false
+
+[dependencies]
+sp1-zkvm = { git = "https://github.com/succinctlabs/sp1.git", tag = "v6.1.0", package = "sp1-zkvm", features = ["verify"] }
+carnot-lib = { path = "../lib", features = ["serde"] }
+sha2 = { workspace = true }
+serde = { workspace = true }

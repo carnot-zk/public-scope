@@ -1,0 +1,53 @@
+{
+  "name": "@carnot-zk/sdk",
+  "version": "0.1.7",
+  "description": "Shared types, Anchor IDLs, PDA helpers, and constants for the Carnot platform",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./idl": {
+      "types": "./dist/idl/index.d.ts",
+      "import": "./dist/idl/index.mjs",
+      "require": "./dist/idl/index.js"
+    },
+    "./pda": {
+      "types": "./dist/pda/index.d.ts",
+      "import": "./dist/pda/index.mjs",
+      "require": "./dist/pda/index.js"
+    },
+    "./constants": {
+      "types": "./dist/constants/index.d.ts",
+      "import": "./dist/constants/index.mjs",
+      "require": "./dist/constants/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint src --ext .ts",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "yarn build"
+  },
+  "peerDependencies": {
+    "@solana/web3.js": "^1.91.0"
+  },
+  "devDependencies": {
+    "@solana/web3.js": "^1.91.0",
+    "@types/node": "^20.0.0",
+    "madge": "^8.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
